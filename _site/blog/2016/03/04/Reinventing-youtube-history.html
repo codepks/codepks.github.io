@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Gearoid O'Connor</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="kudos.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+
+  <div id="container" class="logo"></div><header id="h_small"><nav id="nav_small"><a href="/#about-me">About Me</a><a href="/#Experenice">Experience</a><a href="/#Blog">Blog</a><a href="/#Details">Contact Me</a></nav></header>
+
+
+<script type="text/javascript">
+			// needs to be a string for jquery.cookie
+			var postId = '1';
+			$(function()
+			{
+				// initialize kudos
+				$("figure.kudoable").kudoable();
+				// check to see if user has already kudod
+				// fyi cookies do not work when you are viewing this as a file
+				if($.cookie(postId) == 'true') {
+					// make kudo already kudod
+					$("figure.kudoable").removeClass("animate").addClass("complete");
+					// your server would take care of the proper kudos count, but because this is a
+					// static page, we need to set it here so it doesn't become -1 when you remove
+					// the kudos after a reload
+					$(".num").html(1);
+				}
+				// when kudoing
+				$("figure.kudo").bind("kudo:active", function(e)
+				{
+					console.log("kudoing active");
+				});
+				// when not kudoing
+				$("figure.kudo").bind("kudo:inactive", function(e)
+				{
+					console.log("kudoing inactive");
+				});
+				// after kudo'd
+				$("figure.kudo").bind("kudo:added", function(e)
+				{
+					var element = $(this);
+					// ajax'y stuff or whatever you want
+					console.log("Kodo'd:", element.data('id'), ":)");
+					// set cookie so user cannot kudo again for 7 days
+					$.cookie(postId, 'true', { expires: 7 });
+				});
+				// after removing a kudo
+				$("figure.kudo").bind("kudo:removed", function(e)
+				{
+					var element = $(this);
+					// ajax'y stuff or whatever you want
+					console.log("Un-Kudo'd:", element.data('id'), ":(");
+					// remove cookie
+					$.removeCookie(postId);
+				});
+			});
+		</script>
+
+
+
+<div class="post-header">
+  <h1 class="post-title">Reinventing: Youtube History Page</h1>
+</div>
+<div class="post-header">
+  <p class="post-meta">March 4, 2016 — 01:41</p>
+</div>
+
+<div class="post-wrapper">
+
+
+
+  <article class="post-content">
+    <div class = "blurb-blog">
+    <p>Youtube is undeniably the best online platform for distributing and consuming videos. The quality of the content is consistently getting better.  As a result, I&#39;m always finding new channels that I immediately love. However, I have various issues with the platform itself. The biggest is with the history page for users. There is a lack of proper analysis and statistics on the videos you have watched.</p>
+
+<p>People desire to know the total number of hours they have spent on the platform and videos they have viewed. Also, how many times they have watched their favourite video along with a breakdown of their top channels.</p>
+
+<p>After seeing a gap in the youtube platform, I searched for a way to make the above numerical data available to the Youtube user. In seeking to find a solution, my research concluded that a chrome extension tool would be best suited to this scenario.</p>
+
+<p>It works by automatically obtaining the details of every video you have watched from the history page. It then parses the data pulling the relevant information and saves this to the browser&#39;s local storage.</p>
+
+<p>The following image is an example of the extension in action.</p>
+
+<div class="honeycombpic">
+<img src="https://raw.githubusercontent.com/bawn92/bawn92.github.io/master/assets/img/chromeApp.gif"/>
+</div>
+
+<p>The tool can be downloaded from the Chrome store <a href="https://chrome.google.com/webstore/detail/youtube-extension/fmnofhlebmngahphomblaegaocmmligb">here</a></p>
+
+   </div>
+  </article>
+
+
+</div>
+
+  <footer><div class="lockup"><div class="content-wrap"><nav><a href="#about-me">About Me</a><a href="#Experenice">Experience</a><a href="#Blog">Blog</a><a href="#Details">Contact Me</a></nav><p class="copyright">Gearoid O'Connor</p></div></div></footer>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/functions.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modernizr.js"></script>
+  <script src="assets/js/kudos.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70467029-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
