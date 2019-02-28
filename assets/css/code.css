@@ -1,0 +1,410 @@
+/*! normalize.css 2012-02-07T12:37 UTC - https://github.com/necolas/normalize.css */
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ nav,
+ section,
+ summary {
+     display: block;
+ }
+ 
+ /*
+  * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+  */
+ 
+ audio,
+ canvas,
+ video {
+     display: inline-block;
+     *display: inline;
+     *zoom: 1;
+ }
+ 
+ /*
+  * Prevents modern browsers from displaying 'audio' without controls
+  */
+ 
+ audio:not([controls]) {
+     display: none;
+ }
+ 
+ /*
+  * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+  * Known issue: no IE6 support
+  */
+ 
+ [hidden] {
+     display: none;
+ }
+ 
+ 
+ /* =============================================================================
+    Base
+    ========================================================================== */
+ 
+ 
+ /* =============================================================================
+    Links
+    ========================================================================== */
+ 
+ /*
+  * Addresses outline displayed oddly in Chrome
+  */
+ 
+ a:focus {
+     outline: thin dotted;
+ }
+ 
+ /*
+  * Improves readability when focused and also mouse hovered in all browsers
+  * people.opera.com/patrickl/experiments/keyboard/test
+  */
+ 
+ a:hover,
+ a:active {
+     outline: 0;
+ }
+ 
+ 
+ /* =============================================================================
+    Typography
+    ========================================================================== */
+ 
+ /*
+  * Addresses font sizes and margins set differently in IE6/7
+  * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+  */
+ 
+ h1 {
+     font-size: 2em;
+     margin: 0.67em 0;
+ }
+ 
+ h2 {
+     font-size: 1.5em;
+     margin: 0.83em 0;
+ }
+ 
+ h3 {
+     font-size: 1.17em;
+     margin: 1em 0;
+ }
+ 
+ h4 {
+     font-size: 1em;
+     margin: 1.33em 0;
+ }
+ 
+ h5 {
+     font-size: 0.83em;
+     margin: 1.67em 0;
+ }
+ 
+ h6 {
+     font-size: 0.75em;
+     margin: 2.33em 0;
+ }
+ 
+ /*
+  * Addresses styling not present in IE7/8/9, S5, Chrome
+  */
+ 
+ abbr[title] {
+     border-bottom: 1px dotted;
+ }
+ 
+ /*
+  * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+ */
+ 
+ b,
+ strong {
+     font-weight: bold;
+ }
+ 
+ blockquote {
+     margin: 1em 40px;
+ }
+ 
+ /*
+  * Addresses styling not present in S5, Chrome
+  */
+ 
+ dfn {
+     font-style: italic;
+ }
+ 
+ /*
+  * Addresses styling not present in IE6/7/8/9
+  */
+ 
+ mark {
+     background: #ff0;
+     color: #000;
+ }
+ 
+ /*
+  * Addresses margins set differently in IE6/7
+  */
+ 
+ p,
+ pre {
+     margin: 1em 0;
+ }
+ 
+ /*
+  * Corrects font family set oddly in IE6, S4/5, Chrome
+  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+  */
+ 
+ pre,
+ code,
+ kbd,
+ samp {
+     font-family: monospace, serif;
+     _font-family: 'courier new', monospace;
+     font-size: 1em;
+ }
+ 
+ /*
+  * 1. Addresses CSS quotes not supported in IE6/7
+  * 2. Addresses quote property not supported in S4
+  */
+ 
+ /* 1 */
+ 
+ q {
+     quotes: none;
+ }
+ 
+ /* 2 */
+ 
+ q:before,
+ q:after {
+     content: '';
+     content: none;
+ }
+ 
+ small {
+     font-size: 75%;
+ }
+ 
+ /*
+  * Prevents sub and sup affecting line-height in all browsers
+  * gist.github.com/413930
+  */
+ 
+ sub,
+ sup {
+     font-size: 75%;
+     line-height: 0;
+     position: relative;
+     vertical-align: baseline;
+ }
+ 
+ sup {
+     top: -0.5em;
+ }
+ 
+ sub {
+     bottom: -0.25em;
+ }
+ 
+ 
+ /* =============================================================================
+    Lists
+    ========================================================================== */
+ 
+ /*
+  * Addresses margins set differently in IE6/7
+  */
+ 
+ dl,
+ menu,
+ ol,
+ ul {
+     margin: 1em 0;
+ }
+ 
+ dd {
+     margin: 0 0 0 40px;
+ }
+ 
+ /*
+  * Addresses paddings set differently in IE6/7
+  */
+ 
+ menu,
+ ol,
+ ul {
+     padding: 0 0 0 40px;
+ }
+ 
+ /*
+  * Corrects list images handled incorrectly in IE7
+  */
+ 
+ nav ul,
+ nav ol {
+     list-style: none;
+     list-style-image: none;
+ }
+ 
+ 
+ /* =============================================================================
+    Embedded content
+    ========================================================================== */
+ 
+ /*
+  * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+  * 2. Improves image quality when scaled in IE7
+  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+  */
+ 
+ img {
+     border: 0; /* 1 */
+     -ms-interpolation-mode: bicubic; /* 2 */
+ }
+ 
+ /*
+  * Corrects overflow displayed oddly in IE9
+  */
+ 
+ svg:not(:root) {
+     overflow: hidden;
+ }
+ 
+ 
+ /* =============================================================================
+    Figures
+    ========================================================================== */
+ 
+ /*
+  * Addresses margin not present in IE6/7/8/9, S5, O11
+  */
+ 
+ figure {
+     margin: 0;
+ }
+ 
+ code {
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+  color:#efefef;
+  font-size:13px;
+  margin: 0 4px;
+  padding: 4px 6px;
+  border-radius: 2px;
+}
+
+pre {
+  padding:8px 15px;
+  background: #191919;
+  border-radius: 2px;
+  border:1px solid #121212;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+  overflow: auto;
+  overflow-y: hidden;
+
+  code {
+    color: #efefef;
+    text-shadow: 0px 1px 0px #000;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*
+   generated by rouge http://rouge.jneen.net/
+   original base16 by Chris Kempson (https://github.com/chriskempson/base16)
+*/
+
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #d0d0d0;
+}
+.highlight .err {
+  color: #151515;
+  background-color: #ac4142;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #888;
+}
+.highlight .cp {
+  color: #f4bf75;
+}
+.highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #d0d0d0;
+}
+.highlight .p, .highlight .pi {
+  color: #d0d0d0;
+}
+.highlight .gi {
+  color: #90a959;
+}
+.highlight .gd {
+  color: #ac4142;
+}
+.highlight .gh {
+  color: #6a9fb5;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #aa759f;
+}
+.highlight .kc {
+  color: #d28445;
+}
+.highlight .kt {
+  color: #d28445;
+}
+.highlight .kd {
+  color: #d28445;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #90a959;
+}
+.highlight .sr {
+  color: #75b5aa;
+}
+.highlight .si {
+  color: #8f5536;
+}
+.highlight .se {
+  color: #8f5536;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #6a9fb5;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #90a959;
+}
+.highlight .ss {
+  color: #90a959;
+}
