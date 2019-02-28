@@ -642,7 +642,7 @@ h2, header nav a, header .kicker, footer .lockup a, #h_small #nav_small a, #h_sm
     border-radius: 30px; } }
 
 header {
-  background: url(../img/galway2.jpg) center center;
+  background: url(../img/galway1.jpg) center center;
   background-size: cover; }
   @media only screen and (min-width: 220px) {
     header {
@@ -742,7 +742,7 @@ footer {
       display: flex;
       margin: auto;
       border-radius: 60%;
-      background: url(../img/face.JPG) no-repeat; }
+      background: url(../img/prashant.jpg) no-repeat; }
     .about-lock .face1-img {
       height: 180px;
       width: 180px;
